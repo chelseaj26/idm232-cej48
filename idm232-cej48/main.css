@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'arimoregular';
+    src: url('fonts/arimo-regular-webfont.woff2') format('woff2'),
+        url('fonts/arimo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titillium_webblack';
+    src: url('fonts/titilliumweb-black-webfont.woff2') format('woff2'),
+        url('fonts/titilliumweb-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arimobold';
+    src: url('fonts/arimo-bold-webfont.woff2') format('woff2'),
+        url('fonts/arimo-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    background: white;
+}
+
+body {
+    font-family: 'arimoregular';
+    background: rgba(178, 235, 242, 0.3);
+    margin: 0 auto;
+    height: 850px;
+
+}
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+h1 {
+    font-family: 'titillium_webblack';
+    letter-spacing: 4px;
+    font-size: 5rem;
+    text-align: center;
+    padding: 21rem 0;
+    text-transform: uppercase;
+    margin: 0;
+
+}
+
+h3 {
+    font-family: 'arimobold';
+    margin: 1rem auto;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+#header {
+    margin: 0 auto;
+}
+
+
+
+#tile {
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 1rem;
+}
+
+#tile img {
+    max-width: 800px;
+
+}
+
+#wireframes {
+    text-align: center;
+
+}
+
+#xd_files {
+    max-width: 800px;
+}
+
+#desktop,
+#tablet,
+#mobile {
+    margin: 4rem 0;
+    padding-bottom: 3rem;
+}
+
+/*image div*/
+.image {
+    max-width: 800px;
+    max-height: 800px;
+    display: block;
+}
+
+/*actual image*/
+#wireframes img {
+    max-width: 100%;
+    max-height: 600px;
+
+}
+
+
+/*
+#desktop {
+    float: left;
+    width: 260px;
+
+}
+
+#tablet {
+    float: left;
+    width: 260px;
+}
+
+#mobile {
+    float: left;
+    width: 260px;
+}
+*/
