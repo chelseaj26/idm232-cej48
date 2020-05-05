@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'arimoregular';
+    src: url('fonts/arimo-regular-webfont.woff2') format('woff2'),
+        url('fonts/arimo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titillium_webblack';
+    src: url('fonts/titilliumweb-black-webfont.woff2') format('woff2'),
+        url('fonts/titilliumweb-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arimobold';
+    src: url('fonts/arimo-bold-webfont.woff2') format('woff2'),
+        url('fonts/arimo-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --light-blue: #B2EBF2;
+    --dark-blue: #00BCD4;
+    --light-orange: #FF5722;
+    --dark-orange: #DD2C00;
+    --black: #340B00;
+    --white: #FCF9F9;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'arimoregular';
+    width: 100%;
+    margin: 0;
+
+}
+
+#wrapper {
+    margin: auto;
+    max-width: 1000px;
+}
+
+h1 a:any-link {
+    font-family: 'titillium_webblack';
+    color: var(--dark-orange);
+    letter-spacing: 4px;
+    margin: 1.3rem .5rem;
+}
+
+#navbar {
+    position: absolute;
+    top: 10px;
+    right: -5px;
+
+
+}
+
+#navbar li {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0 2px;
+    display: inline;
+    float: right;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: var(--black);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--light-orange);
+}
+
+img {
+    width: 100%;
+}
+
+#browse {
+    text-align: center;
+    margin: auto;
+}
+
+#browse button {
+    border-radius: 5px;
+    border: 2px solid var(--dark-blue);
+    height: 1.9rem;
+    /*    width: 5rem;*/
+    width: 10rem;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    margin: .2rem;
+    font-size: 1rem;
+    font-family: 'arimobold';
+    letter-spacing: .8px;
+
+}
+
+#browse button:hover {
+    background-color: var(--light-blue);
+    border: 2px solid var(--light-blue);
+}
+
+
+
+
+h3 {
+    font-family: 'arimobold';
+    color: var(--dark-orange);
+    text-align: center;
+
+}
+
+
+h4 {
+    margin: .7rem 0;
+    text-align: center;
+}
+
+#food_card h4 {
+    text-align: center;
+    margin: .3rem;
+}
+
+
+p {
+    text-align: center;
+    margin: .3rem;
+}
+
+#food_card {
+    margin: 1.5rem;
+}
+
+#cards {
+    padding: 3rem 2rem;
+
+    /* Grid styles */
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/*RECIPE PAGE*/
+
+#desc p {
+    max-width: 40rem;
+    text-align: justify;
+    margin: auto;
+    padding: 1rem;
+}
+
+#ing_list ul {
+    list-style: none;
+    margin: auto;
+}
+
+#ing_list {
+    max-width: 35rem;
+    text-align: justify;
+    margin: auto;
+    padding: 1rem;
+}
+
+
+#ing_img {
+    max-width: 800px;
+    margin: auto;
+}
+
+#instructions {
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+#instructions p {
+    max-width: 40rem;
+    text-align: justify;
+    margin: auto;
+    padding: 1rem;
+
+}
+
+#inst_img {
+    margin: 2rem 0;
+}
+
+#title {
+    text-align: center;
+}
