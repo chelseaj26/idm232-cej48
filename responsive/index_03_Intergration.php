@@ -1,3 +1,18 @@
+<?php
+    //Step 1 open a connection to database
+    require'include/db.php';
+
+    // Step 2 preform and DB table query
+    $table = 'recipes';
+    $query = "SELECT * FROM {$table}";
+    $result = mysqli_query($connection, $query);
+
+    // Check for errors
+    if (!$result){
+        die('Database query failed');
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,14 +32,37 @@ single recipe screen
 help screen
 -->
 
+
 <body>
-
-
 
 
     <div id="wrapper">
         <h1> <a href="index.html">CHOPPED KITCHEN</a></h1>
 
+        <!--
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                    <a href="#">
+                        <li>Info</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+-->
         <div id="navbar">
             <div class="search-container">
                 <form action="/action_page.php">
@@ -51,7 +89,6 @@ help screen
                 <img class='photo' src="images/0108_2PRE08_Roasted-Pork_98452_WEB_SQ_hi_res.jpg" alt="" />
             </div>
         </div>
-
         <div id="browse">
             <h3>Browse by Category&#33;</h3>
             <button>Gluten-Free</button>
@@ -61,43 +98,38 @@ help screen
             <button>Vegan</button>
         </div>
         <div id="cards">
+
+            <?php 
+    while($row = mysqli_fetch_assoc($result)) { 
+        ?>
+
             <div id="food_card">
                 <!--            <div class="food_image">-->
-                <a class="food_image" href="recipe.html"><img src="images/11in_Scan_Pan_1786%20(1).jpg" alt="Food Image" a href="recipe.html"></a>
+                <a class="food_image" href="recipe.html"><img src="images/<?php echo $row['main_img']; ?>" alt="Food Image" a href="recipe.html"></a>
                 <!--                <img src="images/broc.jpg" alt="Food Image">-->
                 <!--            </div>-->
-                <div class="title">
-                    <h4>Broccoli &amp; Basil Pesto Sandwiches</h4>
+                <div class="food_name">
+                    <h4><?php echo $row['title']; ?></h4>
+                    <!--                    <h4>Broccoli &amp; Basil Pesto Sandwiches</h4>-->
                 </div>
-                <div class="subtitle">
-                    <p>with Romaine &amp; Citrus Salad</p>
+                <div class="food_desc">
+                    <p><?php echo $row['subtitle']; ?></p>
                 </div>
             </div>
 
-            <div id="food_card">
-                <div class="food_image">
-                    <img src="images/11in_Scan_Pan_1786%20(1).jpg" alt="Food Image">
-                </div>
-                <div class="title">
-                    <h4>Beef Medallions &amp; Mushroom Sauce</h4>
-                </div>
-                <div class="subtitle">
-                    <p>with Mashed Potatoes</p>
-                </div>
-            </div>
-            <div id="food_card">
-                <div class="food_image">
-                    <img src="images/11in_Scan_Pan_1786%20(1).jpg" alt="Food Image">
-                </div>
-                <div class="title">
-                    <h4>Broccoli &amp; Mozzarella Calzones
+            <?php
+            } //End php while loop
 
-                    </h4>
-                </div>
-                <div class="subtitle">
-                    <p>with Caesar Salad</p>
-                </div>
-            </div>
+            //Step 4 Release returned data
+            mysqli_free_result($result);
+
+            //Step 5 close the database connection
+            mysqli_close($connection);
+            ?>
+
+
+
+
         </div>
     </div>
 
