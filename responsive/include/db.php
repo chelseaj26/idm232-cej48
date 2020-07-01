@@ -11,9 +11,9 @@
 
 //online
 $dbhost = "localhost";
-$dbuser = "chelsgg1_cooker";
-$dbpass = "ParkJiyeon1993";
-$dbname = "chelsgg1_cookbook";
+$dbuser = "";
+$dbpass = "";
+$dbname = "";
 
 
 $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
